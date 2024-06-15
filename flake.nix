@@ -18,7 +18,7 @@
 	{
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
-	  home-manager.users.lirelum = import ./lirelum.nix;
+	  home-manager.users.lirelum = import ./home.nix;
 	}
       ];
     };
