@@ -76,9 +76,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  # Enable the Gnome Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -114,6 +114,7 @@
     isNormalUser = true;
     description = "vvvvvvvvvvvvvv";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -136,11 +137,14 @@
     wget
     curl
     git
-    vim
-    neovim
   ];
 
-  programs.neovim.defaultEditor = true;
+  programs.fish.enable = true;
+
+  programs.vim = {
+    package = pkgs.vim;
+    defaultEditor = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
