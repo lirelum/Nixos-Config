@@ -8,5 +8,6 @@
     ./git.nix
     ./neovim.nix
     ./utilities.nix
+    ./shell
   ];
 }
