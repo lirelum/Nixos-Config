@@ -24,5 +24,9 @@
     keepassxc
     discord
     signal-desktop
+    zotero
+    libreoffice
+    gnome.file-roller
+    gnome.gnome-disk-utility
   ];
 }
