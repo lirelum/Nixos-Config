@@ -23,6 +23,7 @@
     ./utilities.nix
     ./gui.nix
     ./secrets.nix
+    ./xfce
   ];
 
   nixpkgs = {

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     xfce.xfce4-appfinder
     xfce.xfce4-panel
     xfce.xfce4-pulseaudio-plugin

@@ -23,8 +23,8 @@
 
     ./programs
     ./services
-    ./xfce
     ./fonts.nix
+    ./xfce
   ];
 
   nixpkgs = {
