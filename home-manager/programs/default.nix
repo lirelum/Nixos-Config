@@ -6,7 +6,6 @@
   imports = [
     ./firefox.nix
     ./git.nix
-    ./neovim.nix
     ./utilities.nix
     ./shell
     ./nixvim
