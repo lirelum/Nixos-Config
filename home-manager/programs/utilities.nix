@@ -22,6 +22,7 @@
     usbutils
     nextcloud-client
     keepassxc
+    xclip
     discord
     signal-desktop
     zotero
