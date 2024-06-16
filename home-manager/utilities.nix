@@ -22,5 +22,6 @@
     usbutils
     nextcloud-client
     keepassxc
+    discord
   ];
 }
