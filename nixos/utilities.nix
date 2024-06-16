@@ -14,7 +14,5 @@
     pinentry-curses
   ];
 
-  services.pcscd.enable = true;
-
   programs.vim.defaultEditor = true;
 }
