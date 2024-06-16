@@ -4,6 +4,10 @@
   lib,
   ...
 }: {
+  home.packages = with pkgs; [
+    elementary-xfce-icon-theme
+    zuki-themes
+  ];
   gtk = {
     enable = true;
     iconTheme = {
