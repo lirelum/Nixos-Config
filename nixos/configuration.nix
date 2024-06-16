@@ -21,6 +21,7 @@
     ./audio.nix
     ./networking.nix
     ./utilities.nix
+    ./gui.nix
   ];
 
   nixpkgs = {
