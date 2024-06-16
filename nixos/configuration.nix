@@ -22,6 +22,7 @@
     ./networking.nix
     ./utilities.nix
     ./gui.nix
+    ./secrets.nix
   ];
 
   nixpkgs = {
