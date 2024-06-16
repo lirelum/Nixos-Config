@@ -23,5 +23,6 @@
     nextcloud-client
     keepassxc
     discord
+    signal
   ];
 }
