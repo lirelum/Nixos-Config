@@ -24,7 +24,7 @@
     pciutils
     usbutils
   ];
-  
+
   programs.git = {
     enable = true;
     userName = "vvvvvvvvvvvvv";
@@ -36,7 +36,7 @@
     settings = {
       env.TERM = "xterm-256color";
       shell = {
-        program = "${pkgs/fish}/bin/fish";
+        program = "${pkgs.fish}/bin/fish";
       };
     };
   };
@@ -44,7 +44,7 @@
   programs.starship = {
     enable = true;
     settings = {
-      shell = {
+      shell = {};
     };
   };
 
@@ -52,8 +52,13 @@
   programs.fish = {
     enable = true;
   };
+
+  programs.zellij = {
+    enable = true;
+    enableFishIntegration = true;
+  };
   
-  home.stateVersion = "23.05";
+  home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;
 }
