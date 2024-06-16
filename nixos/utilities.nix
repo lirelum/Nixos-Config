@@ -10,6 +10,7 @@
     curl
     git
     vim
+    texlive.combined.scheme-full
   ];
 
   programs.vim.defaultEditor = true;
