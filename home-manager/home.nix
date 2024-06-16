@@ -23,6 +23,7 @@
 
     ./programs
     ./services
+    ./xfce
     ./fonts.nix
   ];
 
