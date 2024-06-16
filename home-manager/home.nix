@@ -21,11 +21,9 @@
 
     inputs.nixvim.homeManagerModules.nixvim
 
-    ./git.nix
-    ./shell.nix
-    ./utilities.nix
-    ./firefox.nix
-    ./neovim.nix
+    ./programs
+    ./services
+
   ];
 
   nixpkgs = {
