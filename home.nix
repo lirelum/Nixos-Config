@@ -11,6 +11,7 @@
     unzip
     p7zip
     file
+    neovim
     which
     gnupg
     nix-output-monitor
@@ -36,6 +37,8 @@
       env.TERM = "xterm-256color";
     };
   };
+
+
 
   programs.fish = {
     enable = true;
