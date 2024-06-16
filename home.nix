@@ -38,7 +38,10 @@
     };
   };
 
-
+  programs.starship = {
+    enable = true;
+    settings = {};
+  };
 
   programs.fish = {
     enable = true;
