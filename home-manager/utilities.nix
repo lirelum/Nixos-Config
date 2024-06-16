@@ -21,5 +21,7 @@
     lsof
     pciutils
     usbutils
+    nextcloud-client
+    keepassxc
   ];
 }
