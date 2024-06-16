@@ -23,7 +23,7 @@
 
     ./programs
     ./services
-
+    ./fonts.nix
   ];
 
   nixpkgs = {
