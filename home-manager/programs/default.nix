@@ -9,5 +9,6 @@
     ./neovim.nix
     ./utilities.nix
     ./shell
+    ./nixvim
   ];
 }
