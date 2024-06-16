@@ -57,7 +57,7 @@
     enable = true;
     enableFishIntegration = true;
     settings = {
-      default_shell = "${pkgs.fish}/bin/fish"
+      default_shell = "${pkgs.fish}/bin/fish";
     };
   };
   
