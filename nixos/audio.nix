@@ -3,8 +3,8 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
-    alse.enable = true;
-    alse.support23Bit = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
   };
 }
