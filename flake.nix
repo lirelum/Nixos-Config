@@ -59,8 +59,6 @@
           ./nixos/configuration.nix
         ];
       };
-      
     };
-
   };
 }

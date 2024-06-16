@@ -10,7 +10,6 @@
     unzip
     p7zip
     file
-    neovim
     which
     gnupg
     nix-output-monitor

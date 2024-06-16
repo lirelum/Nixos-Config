@@ -18,10 +18,14 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+
+    inputs.nixvim.homeManagerModules.nixvim
+
     ./git.nix
     ./shell.nix
     ./utilities.nix
     ./firefox.nix
+    ./neovim.nix
   ];
 
   nixpkgs = {
