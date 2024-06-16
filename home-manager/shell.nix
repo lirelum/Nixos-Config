@@ -17,7 +17,7 @@
     enable = true;
   };
 
-  programs.starsip = {
+  programs.starship = {
     enable = true;
   };
 

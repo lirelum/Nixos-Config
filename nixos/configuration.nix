@@ -12,6 +12,8 @@
   imports = [
     ./hardware-configuration.nix
 
+    inputs.home-manager.nixosModules.home-manager
+
     ./boot.nix
     ./nvidia.nix
     ./users.nix
@@ -49,6 +51,13 @@
     # Opinionated: make flake registry and nix path match flake inputs
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+  };
+  
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      lirelum = import ../home-manager/home.nix;
+    };
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
