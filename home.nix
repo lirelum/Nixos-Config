@@ -35,13 +35,19 @@
     enable = true;
     settings = {
       env.TERM = "xterm-256color";
+      shell = {
+        program = "${pkgs/fish}/bin/fish";
+      };
     };
   };
 
   programs.starship = {
     enable = true;
-    settings = {};
+    settings = {
+      shell = {
+    };
   };
+
 
   programs.fish = {
     enable = true;
