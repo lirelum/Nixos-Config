@@ -56,13 +56,6 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
-  home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
-    users = {
-      lirelum = import ../home-manager/home.nix;
-    };
-  };
-
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
 }
