@@ -29,4 +29,7 @@
     gnome.file-roller
     gnome.gnome-disk-utility
   ];
+  services.gpg-agent = {
+    enable = true;
+  };
 }
