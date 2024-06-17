@@ -19,7 +19,7 @@
     
     # Flake programs sqlite
     fps.url = "github:wamserma/flake-programs-dqlite";
-    fps.inputs.nixpkgs.follow = "nixpkgs";
+    fps.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
