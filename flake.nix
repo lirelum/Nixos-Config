@@ -18,7 +18,7 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     
     # Flake programs sqlite
-    fps.url = "github:wamserma/flake-programs-dqlite";
+    fps.url = "github:wamserma/flake-programs-sqlite";
     fps.inputs.nixpkgs.follows = "nixpkgs";
   };
 
