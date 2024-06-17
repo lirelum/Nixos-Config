@@ -16,6 +16,10 @@
     # Nixvim
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    
+    # Flake programs sqlite
+    fps.url = "github:wamserma/flake-programs-dqlite";
+    fps.inputs.nixpkgs.follow = "nixpkgs";
   };
 
   outputs = {
@@ -23,6 +27,7 @@
     nixpkgs,
     home-manager,
     nixvim,
+    fps,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -49,6 +54,7 @@
 	    home-manager.extraSpecialArgs = { inherit inputs outputs; };
 	    home-manager.users.lirelum = import ./home-manager/home.nix;
 	  }
+	  fps.nixosModules.programs-sqlite
         ];
       };
     };
