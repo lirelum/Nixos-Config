@@ -24,6 +24,7 @@
     ./gui.nix
     ./secrets.nix
     ./xfce
+    ./steam.nix
   ];
 
   nixpkgs = {
