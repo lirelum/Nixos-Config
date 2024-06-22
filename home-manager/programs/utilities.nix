@@ -29,6 +29,7 @@
     libreoffice
     gnome.file-roller
     gnome.gnome-disk-utility
+    calibre
   ];
   services.gpg-agent = {
     enable = true;
