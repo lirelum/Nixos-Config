@@ -7,6 +7,7 @@
     neofetch
     zip
     xz
+    thunderbird
     unzip
     p7zip
     file
