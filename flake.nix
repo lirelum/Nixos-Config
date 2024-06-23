@@ -16,7 +16,7 @@
     # Nixvim
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    
+
     # Flake programs sqlite
     fps.url = "github:wamserma/flake-programs-sqlite";
     fps.inputs.nixpkgs.follows = "nixpkgs";
@@ -50,11 +50,12 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./nixos/configuration.nix
-	  home-manager.nixosModules.home-manager {
-	    home-manager.extraSpecialArgs = { inherit inputs outputs; };
-	    home-manager.users.lirelum = import ./home-manager/home.nix;
-	  }
-	  fps.nixosModules.programs-sqlite
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {inherit inputs outputs;};
+            home-manager.users.lirelum = import ./home-manager/home.nix;
+          }
+          fps.nixosModules.programs-sqlite
         ];
       };
     };
