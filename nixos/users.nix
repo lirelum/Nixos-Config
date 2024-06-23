@@ -5,6 +5,7 @@
     extraGroups = ["networkmanager" "wheel"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJSVa1FUx6NEjul53wdP51KHxyuBjShOhLGkd86jd8PP lirelum@zundamon.local"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFuaNvM8eOQngd7kn3WJXDcecyafi1wl6pdCuvu0zABl lirelum@zundamon.local"
     ];
   };
 }
