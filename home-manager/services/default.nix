@@ -4,5 +4,6 @@
   ...
 }: {
   imports = [
+    ./gpg.nix
   ];
 }
