@@ -33,5 +33,6 @@
     evince
     calibre
     logseq
+    neovim
   ];
 }

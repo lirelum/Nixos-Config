@@ -8,6 +8,5 @@
     ./git.nix
     ./utilities.nix
     ./shell
-    ./nixvim
   ];
 }
