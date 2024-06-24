@@ -13,7 +13,7 @@
     texlive.combined.scheme-full
     gcc9
     rustup
-    ghcup
+    haskellPackages.ghcup
   ];
 
   programs.vim.defaultEditor = true;
