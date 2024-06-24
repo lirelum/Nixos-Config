@@ -26,6 +26,7 @@
     ./secrets.nix
     ./xfce
     ./steam.nix
+    ./hyprland.nix
   ];
 
   nixpkgs = {
