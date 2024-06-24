@@ -11,7 +11,7 @@
     git
     vim
     texlive.combined.scheme-full
-    pinentry-curses
+    gcc9
   ];
 
   programs.vim.defaultEditor = true;
