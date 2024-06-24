@@ -12,6 +12,8 @@
     vim
     texlive.combined.scheme-full
     gcc9
+    rustup
+    ghcup
   ];
 
   programs.vim.defaultEditor = true;
