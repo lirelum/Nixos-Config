@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   ...
 }: {
   services.printing.enable = true;
@@ -13,7 +14,6 @@
     texlive.combined.scheme-full
     gcc9
     rustup
-    haskellPackages.ghcup
   ];
 
   programs.vim.defaultEditor = true;

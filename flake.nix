@@ -25,6 +25,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     nixvim,
     fps,
@@ -49,8 +50,10 @@
     homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {
-      miku = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+      miku = nixpkgs.lib.nixosSystem rec {
+        specialArgs = {
+          inherit inputs outputs;
+        };
         modules = [
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
