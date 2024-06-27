@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   networking.hostName = "miku";
   networking.networkmanager.enable = true;
 
@@ -21,5 +21,9 @@
       PasswordAuthentication = false;
     };
     openFirewall = true;
+  };
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
   };
 }
