@@ -14,6 +14,7 @@
     texlive.combined.scheme-full
     gcc9
     rustup
+    expressvpn
   ];
 
   programs.vim.defaultEditor = true;
