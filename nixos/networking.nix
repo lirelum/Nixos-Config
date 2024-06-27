@@ -22,8 +22,5 @@
     };
     openFirewall = true;
   };
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
-  };
+  services.expressvpn.enable = true;
 }
