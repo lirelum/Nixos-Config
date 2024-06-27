@@ -18,5 +18,6 @@
   services.xserver = {
     xkb.layout = "us";
     xkb.variant = "";
+    xkb.options = "compose:menu";
   };
 }
