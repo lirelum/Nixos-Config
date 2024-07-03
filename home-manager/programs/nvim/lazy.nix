@@ -13,7 +13,6 @@
       # Telescope
       ripgrep
       nil
-      haskellPackages.hls
     ];
 
     plugins = with pkgs.vimPlugins; [
