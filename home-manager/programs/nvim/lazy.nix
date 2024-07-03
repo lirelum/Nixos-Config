@@ -14,6 +14,7 @@
       ripgrep
       nil
       rust-analyzer
+      haskellPackages.haskell-language-server
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -142,6 +143,9 @@
           with plugins; [
             c
             lua
+            nix
+            haskell
+            rust
           ]))
         .dependencies;
     };
