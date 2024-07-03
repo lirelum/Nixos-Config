@@ -13,6 +13,7 @@
       # Telescope
       ripgrep
       nil
+      rust-analyzer
     ];
 
     plugins = with pkgs.vimPlugins; [
