@@ -12,8 +12,6 @@
     git
     vim
     texlive.combined.scheme-full
-    gcc9
-    rustup
     expressvpn
   ];
 
