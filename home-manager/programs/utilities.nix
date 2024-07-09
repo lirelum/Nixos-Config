@@ -34,6 +34,7 @@
     calibre
     logseq
     mc
+    alejandra
   ];
 
   programs.vscode = {
