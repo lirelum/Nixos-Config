@@ -34,6 +34,6 @@
     calibre
     logseq
     mc
-    vscodium-fhs
+    vscode.fhs
   ];
 }
