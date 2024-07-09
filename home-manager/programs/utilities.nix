@@ -34,5 +34,6 @@
     calibre
     logseq
     mc
+    vscodium-fhs
   ];
 }
