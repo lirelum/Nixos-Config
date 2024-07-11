@@ -35,6 +35,7 @@
     logseq
     mc
     alejandra
+    nil
   ];
 
   programs.vscode = {
