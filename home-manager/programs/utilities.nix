@@ -36,6 +36,7 @@
     mc
     alejandra
     nil
+    manuskript
   ];
 
   programs.vscode = {
