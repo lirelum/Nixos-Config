@@ -34,8 +34,7 @@
     calibre
     logseq
     mc
-    alejandra
-    nil
     manuskript
+    neovim
   ];
 }
