@@ -9,6 +9,9 @@ in {
     enable = true;
     extensions = with extensions.vscode-marketplace; [
       rust-lang.rust-analyzer
+      jnoortheen.nix-ide
+      vscodevim.vim
+      kamadorueda.alejandra
     ];
   };
 }
