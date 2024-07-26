@@ -1,3 +1,4 @@
+{pkgs,...}:
 {
   time.timeZone = "America/New_York";
 
@@ -19,5 +20,13 @@
     xkb.layout = "us";
     xkb.variant = "";
     xkb.options = "compose:menu";
+  };
+
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+      fcitx5-mozc
+    ];
   };
 }
