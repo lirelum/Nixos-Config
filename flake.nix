@@ -51,16 +51,18 @@
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
 
-    nixosConfigurations = {
-      miku = nixpkgs.lib.nixosSystem rec {
+    nixosConfigurations = let
+      pkgs-unstable = nixpkgs-unstable.legacyPackages."x86_64-linux";
+    in {
+      miku = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit inputs outputs;
+          inherit inputs outputs pkgs-unstable;
         };
         modules = [
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.extraSpecialArgs = {inherit inputs outputs;};
+            home-manager.extraSpecialArgs = {inherit inputs outputs pkgs-unstable;};
             home-manager.users.lirelum = import ./home-manager/home.nix;
           }
           fps.nixosModules.programs-sqlite
