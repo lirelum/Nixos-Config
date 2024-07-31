@@ -1,3 +1,12 @@
-pkgs: {
-  rebuild-nixos = pkgs.callPackage ./rebuild-nixos.nix {};
+{inputs, ...}: {
+  perSystem = {
+    config,
+    self',
+    inputs',
+    pkgs,
+    system,
+    ...
+  }: {
+    packages = import ./pkgs.nix pkgs;
+  };
 }
