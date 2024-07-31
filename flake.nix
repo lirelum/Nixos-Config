@@ -10,17 +10,10 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
         ./modules
+        ./overlays
       ];
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
-      perSystem = {
-        config,
-        self',
-        inputs',
-        pkgs,
-        system,
-        ...
-      }: {
-        packages = import ./pkgs pkgs;
+      perSystem = {pkgs, ...}: {
         formatter = pkgs.alejandra;
       };
     };
