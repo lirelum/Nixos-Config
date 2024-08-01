@@ -25,7 +25,6 @@
     evince
     calibre
     neovim
-    unstable.signal-desktop
     thunderbird
   ];
 }
