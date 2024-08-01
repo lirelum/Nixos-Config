@@ -1,5 +1,9 @@
 {...}: {
-  flake.homeModules.common = {lib, ...}: {
+  flake.homeModules.common = {
+    lib,
+    config,
+    ...
+  }: {
     imports = lib.local.getModules [./.];
   };
 }
