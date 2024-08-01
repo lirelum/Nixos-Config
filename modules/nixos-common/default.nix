@@ -5,13 +5,11 @@
     config,
     ...
   }: {
-    imports = [
-      ./xfce
-      ./audio.nix
-      ./locale.nix
-      ./networking.nix
-      ./secrets.nix
-    ];
+    imports =
+      lib.getModules [./.]
+      ++ [
+        inputs.fps.nixosModules.programs-sqlite
+      ];
 
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
