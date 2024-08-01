@@ -1,26 +1,38 @@
-{config, ...}: {
-  networking.hostName = config.hostname;
-  networking.networkmanager.enable = true;
+{
+  config,
+  lib,
+  ...
+}: let
+  inherit (lib) mkOption types;
+in {
+  options.local = {
+    hostname = mkOption {type = types.string;};
+  };
 
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    ipv4 = true;
-    ipv6 = true;
-    publish = {
+  config = {
+    networking.hostName = config.local.hostname;
+    networking.networkmanager.enable = true;
+
+    services.avahi = {
       enable = true;
-      addresses = true;
-      workstation = true;
+      nssmdns4 = true;
+      ipv4 = true;
+      ipv6 = true;
+      publish = {
+        enable = true;
+        addresses = true;
+        workstation = true;
+      };
     };
-  };
 
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
+    services.openssh = {
+      enable = true;
+      settings = {
+        PermitRootLogin = "no";
+        PasswordAuthentication = false;
+      };
+      openFirewall = true;
     };
-    openFirewall = true;
+    services.expressvpn.enable = true;
   };
-  services.expressvpn.enable = true;
 }

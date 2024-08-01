@@ -1,5 +1,5 @@
 {config, ...}: {
-  security.pam.services.${config.username}.enableGnomeKeyring = true;
+  security.pam.services.${config.local.users.default.user}.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
   services.pcscd.enable = true;
   programs.ssh.startAgent = true;
