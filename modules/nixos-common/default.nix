@@ -6,6 +6,10 @@
     ...
   }: {
     imports = [
+      ./xfce
+      ./audio.nix
+      ./locale.nix
+      ./networking.nix
     ];
 
     nix = let
