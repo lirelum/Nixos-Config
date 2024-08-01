@@ -12,7 +12,7 @@
       ...
     }:
       pkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs inputs' pkgs;};
+        specialArgs = {inherit inputs inputs' pkgs lib;};
         modules =
           [
             self.nixosModules.common

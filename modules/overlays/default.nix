@@ -9,6 +9,7 @@
     inputs',
     pkgs,
     system,
+    lib,
     ...
   }: {
     _module.args.pkgs = import inputs.nixpkgs {
@@ -21,6 +22,23 @@
       ];
       config.allowUnfree = true;
     };
+
+    _module.args.lib = lib.extend (
+      final: prev: {
+        local = let
+          lib = final;
+          getPaths = file: root:
+            builtins.filter builtins.pathExists (
+              map (dir: root + "/${dir}/${file}") (
+                lib.attrNames (lib.filterAttrs (name: type: type == "directory") (builtins.readDir root))
+              )
+            );
+        in {
+          inherit getPaths;
+          getModules = builtins.concatMap (getPaths "default.nix");
+        };
+      }
+    );
   };
   flake.overlays = {
     additions = final: _prev: {
@@ -35,25 +53,6 @@
         system = final.system;
         config.allowUnfree = true;
       };
-    };
-
-    lib-extension = final: prev: {
-      lib =
-        prev.lib
-        // {
-          local = let
-            lib = final.lib;
-            getPaths = file: root:
-              builtins.filter builtins.pathExists (
-                map (dir: root + "/${dir}/${file}") (
-                  lib.attrNames (lib.filterAttrs (name: type: type == "directory") (builtins.readDir root))
-                )
-              );
-          in {
-            inherit getPaths;
-            getModules = builtins.concatMap (getPaths "default.nix");
-          };
-        };
     };
   };
 }
