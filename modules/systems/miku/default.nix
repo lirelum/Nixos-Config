@@ -19,7 +19,7 @@
             inputs.home-manager.nixosModules.home-manager
             ./hardware.nix
           ]
-          ++ lib.getModules [./.];
+          ++ lib.local.getModules [./.];
       }
   );
 }

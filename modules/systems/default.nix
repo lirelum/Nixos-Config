@@ -1,3 +1,3 @@
 {lib, ...}: {
-  imports = lib.getModules [./.];
+  imports = lib.local.getModules [./.];
 }

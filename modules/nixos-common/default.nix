@@ -6,7 +6,7 @@
     ...
   }: {
     imports =
-      lib.getModules [./.]
+      lib.local.getModules [./.]
       ++ [
         inputs.fps.nixosModules.programs-sqlite
         (lib.mkAliasOptionModule ["hm"] [
