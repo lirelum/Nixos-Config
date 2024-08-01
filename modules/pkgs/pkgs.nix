@@ -1,3 +1,3 @@
 pkgs: {
-  rebuild-nixos = pkgs.callPackage ./rebuild-nixos.nix {};
+  rebuild-nixos = pkgs.callPackage ./rebuild-nixos {};
 }
