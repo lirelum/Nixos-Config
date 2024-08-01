@@ -41,7 +41,7 @@
   flake.overlays = {
     additions = final: _prev: {
       local = self.packages.${final.system};
-      neve = inputs.neve.packages.${final.system};
+      neve = inputs.neve.packages.${final.system}.default;
     };
 
     modifications = final: prev: {

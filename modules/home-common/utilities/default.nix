@@ -24,7 +24,7 @@
     gnome.file-roller
     evince
     calibre
-    neovim
     thunderbird
+    neve
   ];
 }
