@@ -20,7 +20,7 @@
     hm.imports = [
       self.homeModules.common
     ];
-    home-manager.extraSpecialArgs = {inherit inputs;};
+    home-manager.extraSpecialArgs = {inherit inputs pkgs;};
 
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
