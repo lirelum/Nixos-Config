@@ -8,8 +8,8 @@
     self',
     inputs',
     pkgs,
-    system,
     lib,
+    system,
     ...
   }: {
     _module.args.pkgs = import inputs.nixpkgs {
@@ -18,11 +18,9 @@
         self.overlays.additions
         self.overlays.modifications
         self.overlays.unstable-packages
-        self.overlays.lib-extension
       ];
       config.allowUnfree = true;
     };
-
     _module.args.lib = lib.extend (
       final: prev: {
         local = let

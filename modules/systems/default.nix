@@ -1,3 +1,5 @@
-{lib, ...}: {
-  imports = lib.local.getModules [./.];
+{...}: {
+  imports = [
+    ./miku
+  ];
 }

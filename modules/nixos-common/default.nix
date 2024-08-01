@@ -13,17 +13,14 @@
         (lib.mkAliasOptionModule ["hm"] [
           "home-manager"
           "users"
-        ])
-        (lib.mkAliasOptionModule ["hm" "default"] [
-          "home-manager"
-          "users"
           config.local.users.default.user
         ])
       ];
 
-    hm.default.imports = [
+    hm.imports = [
       self.homeModules.common
     ];
+    home-manager.extraSpecialArgs = {inherit inputs;};
 
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
