@@ -2,5 +2,6 @@
   imports = [
     ./pkgs
     ./overlays
+    ./systems
   ];
 }
