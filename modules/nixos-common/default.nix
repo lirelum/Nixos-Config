@@ -10,6 +10,7 @@
       ./audio.nix
       ./locale.nix
       ./networking.nix
+      ./secrets.nix
     ];
 
     nix = let
