@@ -4,6 +4,7 @@
     curl
     git
     vim
+    alejandra
     local.rebuild-nixos
   ];
   programs.vim.defaultEditor = true;
