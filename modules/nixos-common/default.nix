@@ -9,6 +9,15 @@
       lib.getModules [./.]
       ++ [
         inputs.fps.nixosModules.programs-sqlite
+        (lib.mkAliasOptionModule ["hm"] [
+          "home-manager"
+          "users"
+        ])
+        (lib.mkAliasOptionModule ["hm" "default"] [
+          "home-manager"
+          "users"
+          config.local.users.default.user
+        ])
       ];
 
     nix = let
