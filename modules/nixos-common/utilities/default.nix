@@ -4,6 +4,7 @@
     curl
     git
     vim
+    local.rebuild-nixos
   ];
   programs.vim.defaultEditor = true;
 }
