@@ -18,7 +18,7 @@ writeShellScriptBin "rebuild-nixos" ''
   fi
   ${coreutils-full}/bin/echo "Testing build..."
   ${coreutils-full}/bin/sleep 1
-  sudo ${nixos-rebuild}/bin/nixos-rebuild test --flake /etc/nixos/ &>nixos-switch.log || (${coreutils-full}/bin/cat nixos-switch.log | ${gnugrep}/bin/grep --color error && false)
+  sudo ${nixos-rebuild}/bin/nixos-rebuild test &>nixos-switch.log || (${coreutils-full}/bin/cat nixos-switch.log | ${gnugrep}/bin/grep --color error && false)
   read -p "Commit? (Y/n) " commit
   if [[ "$commit" != "y" ]] && [[ "$commit" != "" ]]; then
       ${coreutils-full}/bin/echo "Exiting..."
@@ -31,6 +31,6 @@ writeShellScriptBin "rebuild-nixos" ''
   else
       ${git}/bin/git commit -am "$message"
   fi
-  sudo ${nixos-rebuild}/bin/nixos-rebuild switch --flake /etc/nixos &>nixos-switch.log || (${coreutils-full}/bin/cat nixos-switch.log | ${gnugrep}/bin/grep --color error && false)
+  sudo ${nixos-rebuild}/bin/nixos-rebuild switch &>nixos-switch.log || (${coreutils-full}/bin/cat nixos-switch.log | ${gnugrep}/bin/grep --color error && false)
   ${git}/bin/git show
 ''
