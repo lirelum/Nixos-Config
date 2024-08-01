@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.commmon = {
+  flake.nixosModules.common = {
     inputs,
     lib,
     config,
