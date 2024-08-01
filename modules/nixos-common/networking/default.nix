@@ -6,7 +6,7 @@
   inherit (lib) mkOption types;
 in {
   options.local = {
-    hostname = mkOption {type = types.string;};
+    hostname = mkOption {type = types.str;};
   };
 
   config = {

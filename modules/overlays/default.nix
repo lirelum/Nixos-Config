@@ -40,7 +40,7 @@
   };
   flake.overlays = {
     additions = final: _prev: {
-      local = self.${final.system}.packages;
+      local = self.packages.${final.system};
     };
 
     modifications = final: prev: {
