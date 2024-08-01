@@ -1,4 +1,4 @@
-{...}: {
+{self, ...}: {
   flake.nixosModules.common = {
     inputs,
     lib,
@@ -19,6 +19,10 @@
           config.local.users.default.user
         ])
       ];
+
+    hm.default.imports = [
+      self.homeModules.common
+    ];
 
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
