@@ -25,6 +25,6 @@
     evince
     calibre
     thunderbird
-    neve
+    nvim
   ];
 }

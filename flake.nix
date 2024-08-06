@@ -10,8 +10,8 @@
     fps.url = "github:wamserma/flake-programs-sqlite";
     fps.inputs.nixpkgs.follows = "nixpkgs";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
-    neve.url = "git+file:./flakes/neve";
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nixvim-config.url = "github:lirelum/nixvim-config";
+    nixvim-config.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {flake-parts, ...}:
