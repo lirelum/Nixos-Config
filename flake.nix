@@ -14,6 +14,7 @@
     nixvim-config.inputs.nixpkgs.follows = "nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    hyprland-virtual-desktops.url = "github:levnikmyskin/hyprland-virtual-desktops";
   };
 
   outputs = inputs @ {flake-parts, ...}:
