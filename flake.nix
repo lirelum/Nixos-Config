@@ -1,5 +1,5 @@
 {
-  description = "Description for the project";
+  description = "Unified nix configuration";
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -12,6 +12,8 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
     nixvim-config.url = "github:lirelum/nixvim-config";
     nixvim-config.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {flake-parts, ...}:

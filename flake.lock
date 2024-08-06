@@ -235,6 +235,26 @@
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1722924007,
+        "narHash": "sha256-+CQDamNwqO33REJLft8c26NbUi2Td083hq6SvAm2xkU=",
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "rev": "91010a5613ffd7ee23ee9263213157a1c422b705",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "nix-darwin_2": {
+      "inputs": {
+        "nixpkgs": [
           "nixvim-config",
           "nixvim",
           "nixpkgs"
@@ -349,7 +369,7 @@
         "flake-parts": "flake-parts_3",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager_2",
-        "nix-darwin": "nix-darwin",
+        "nix-darwin": "nix-darwin_2",
         "nixpkgs": "nixpkgs_2",
         "nuschtosSearch": "nuschtosSearch",
         "treefmt-nix": "treefmt-nix"
@@ -418,6 +438,7 @@
         "flake-parts": "flake-parts",
         "fps": "fps",
         "home-manager": "home-manager",
+        "nix-darwin": "nix-darwin",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
