@@ -1,3 +1,0 @@
-[submodule "flakes/neve"]
-	path = flakes/neve
-	url = git@github.com:lirelum/Neve.git
