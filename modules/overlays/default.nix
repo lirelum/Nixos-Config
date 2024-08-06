@@ -41,7 +41,7 @@
   flake.overlays = {
     additions = final: _prev: {
       local = self.packages.${final.system};
-      nvim = inputs.nixvim-config.packages.${final.system}.nvim;
+      nvim = inputs.nixvim-config.packages.${final.system}.default;
     };
 
     modifications = final: prev: {
