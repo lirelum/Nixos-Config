@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  imports = [
+    ./rofi.nix
+  ];
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = with pkgs.hyprlandPlugins; [
