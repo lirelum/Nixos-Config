@@ -9,8 +9,9 @@
       bind =
         [
           "$mod, F, exec, firefox"
-          "$mod, Q, exit"
+          "$mod, M, exit"
           "$mod, T, exec, alacritty"
+          "$mod, Q, killactive"
         ]
         ++ (
           builtins.concatLists (builtins.genList (
