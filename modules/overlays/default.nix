@@ -39,12 +39,17 @@
     );
   };
   flake.overlays = {
-    additions = final: _prev: {
+    additions = final: prev: {
       local = self.packages.${final.system};
       nvim = inputs.nixvim-config.packages.${final.system}.default;
     };
 
     modifications = final: prev: {
+      hyprland = prev.hyprland.override {
+        enableXWayland = true;
+        legacyRenderer = false;
+        withSystemd = true;
+      };
     };
 
     unstable-packages = final: _prev: {
