@@ -11,7 +11,7 @@
     fps.inputs.nixpkgs.follows = "nixpkgs";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
     nixvim-config.url = "github:lirelum/nixvim-config";
-    nixvim-config.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim-config.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs = inputs @ {flake-parts, ...}:

@@ -15,10 +15,11 @@ in {
     ];
     group = default.user;
     isNormalUser = true;
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
     uid = default.uid;
     openssh.authorizedKeys.keys = default.keys;
   };
+  programs.zsh.enable = true;
   system.stateVersion = "24.05";
   hm.home.stateVersion = "24.05";
 }
