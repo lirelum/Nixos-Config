@@ -1,9 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./rofi.nix
-    ./startup.nix
     ./waybar.nix
-    ./misc.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -16,7 +14,8 @@
         gaps_out = 10;
       };
       exec-once = [
-        "startup"
+        "waybar"
+        "pasystray"
       ];
       bind =
         [

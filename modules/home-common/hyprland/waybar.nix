@@ -1,8 +1,4 @@
 {config, ...}: {
-  services = {
-    network-manager-applet.enable = true;
-  };
-
   programs.waybar = {
     enable = true;
     # package = inputs.waybar.packages."${pkgs.system}".waybar;
@@ -74,7 +70,6 @@
         "custom/logo" = {
           format = "  ";
           tooltip = false;
-          on-click = "menu";
         };
 
       };
