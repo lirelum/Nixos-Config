@@ -2,7 +2,7 @@
   programs.zellij = {
     enable = true;
     settings = {
-      default_shell = "${pkgs.fish}/bin/fish";
+      default_shell = "${pkgs.zsh}/bin/zsh";
     };
   };
 }
