@@ -50,7 +50,7 @@
     };
 
     modifications = final: prev: {
-      hyprland = prev.hyprland.override {
+      hyprland'.hyprland = prev.hyprland'.hyprland.override {
         enableXWayland = true;
         legacyRenderer = false;
         withSystemd = true;
