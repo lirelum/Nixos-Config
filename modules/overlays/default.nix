@@ -39,10 +39,11 @@
     );
   };
   flake.overlays = {
-    additions = final: prev: {
+    additions = final: prev: rec {
       local = self.packages.${final.system};
       nvim = inputs.nixvim-config.packages.${final.system}.default;
       hyprland' = inputs.hyprland.packages.${final.system};
+      hyprland = hyprland'.hyprland;
       hyprlandPlugins =
         prev.hyprlandPlugins
         // inputs.split-monitor-workspaces.packages.${final.system}

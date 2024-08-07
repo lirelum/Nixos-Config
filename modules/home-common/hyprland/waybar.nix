@@ -71,7 +71,6 @@
           format = "  ";
           tooltip = false;
         };
-
       };
     };
   };

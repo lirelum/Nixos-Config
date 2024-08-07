@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.hyprland = {
     enable = true;
-    package = pkgs.hyprland'.hyprland;
+    package = pkgs.hyprland;
   };
 
   nix.settings = {

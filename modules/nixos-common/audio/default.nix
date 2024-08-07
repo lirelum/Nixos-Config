@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -8,5 +7,5 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  environment.systemPackages = [ pkgs.pasystray ];
+  environment.systemPackages = [pkgs.pasystray];
 }
