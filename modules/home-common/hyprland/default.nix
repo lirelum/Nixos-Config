@@ -12,6 +12,9 @@
     ];
     settings = {
       "$mod" = "SUPER";
+      general = {
+        gaps_out = 10;
+      };
       exec-once = [
         "startup"
       ];
