@@ -45,8 +45,7 @@
       hyprland' = inputs.hyprland.packages.${final.system};
       hyprlandPlugins =
         prev.hyprlandPlugins
-        // inputs.hyprland-plugins.packages.${final.system}
-        // inputs.hyprland-virtual-desktops.packages.${final.system};
+        // inputs.hyprland-plugins.packages.${final.system};
     };
 
     modifications = final: prev: {

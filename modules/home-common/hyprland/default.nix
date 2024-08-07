@@ -6,7 +6,6 @@
     enable = true;
     plugins = with pkgs.hyprlandPlugins; [
       hyprbars
-      virtual-desktops
     ];
     settings = {
       "$mod" = "SUPER";
