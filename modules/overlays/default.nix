@@ -42,7 +42,11 @@
     additions = final: prev: {
       local = self.packages.${final.system};
       nvim = inputs.nixvim-config.packages.${final.system}.default;
-      hyprlandPlugins = prev.hyprlandPlugins // inputs.hyprland-virtual-desktops.packages.${final.system};
+      hyprland' = inputs.hyprland.packages.${final.system};
+      hyprlandPlugins =
+        prev.hyprlandPlugins
+        // inputs.hyprland-plugins.packages.${final.system}
+        // inputs.hyprland-virtual-desktops.packages.${final.system};
     };
 
     modifications = final: prev: {
