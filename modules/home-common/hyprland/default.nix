@@ -3,11 +3,11 @@
     ./rofi.nix
     ./startup.nix
     ./waybar.nix
+    ./misc.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = with pkgs.hyprlandPlugins; [
-      hyprbars
       split-monitor-workspaces
     ];
     settings = {
@@ -26,6 +26,10 @@
           "$mod, Q, killactive"
           "$mod, R, exec, rofi -show run"
           "$mod SHIFT, R, exec, rofi -show drun -show-icons"
+          "$mod, H, movefocus, l"
+          "$mod, J, movefocus, u"
+          "$mod, K, movefocus, d"
+          "$mod, L, movefocus, r"
         ]
         ++ (
           builtins.concatLists (builtins.genList (
