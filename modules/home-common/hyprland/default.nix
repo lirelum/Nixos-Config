@@ -39,6 +39,7 @@
       monitor = [
         "HDMI-A-1, 1920x1080, 1280x0, 1"
         "DP-3, 1280x1024, 0x0, 1"
+        "Unkown-1, disable"
       ];
     };
   };
