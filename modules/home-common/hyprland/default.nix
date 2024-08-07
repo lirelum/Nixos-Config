@@ -24,6 +24,8 @@
           "$mod, M, exit"
           "$mod, T, exec, alacritty"
           "$mod, Q, killactive"
+          "$mod, R, exec, rofi -show run"
+          "$mod SHIFT, R, exec, rofi -show drun -show-icons"
         ]
         ++ (
           builtins.concatLists (builtins.genList (
