@@ -17,8 +17,8 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.41.2";
     hyprland-plugins.url = "github:hyprwm/hyprland-plugins/?ref=refs/tags/v0.41.2";
     hyprland-plugins.inputs.hyprland.follows = "hyprland";
-    hyprland-virtual-desktops = {
-      url = "github:levnikmyskin/hyprland-virtual-desktops/?ref=refs/tags/v2.2.3";
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
     };
   };

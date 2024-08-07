@@ -45,6 +45,7 @@
       hyprland' = inputs.hyprland.packages.${final.system};
       hyprlandPlugins =
         prev.hyprlandPlugins
+        // inputs.split-monitor-workspaces.packages.${final.system}
         // inputs.hyprland-plugins.packages.${final.system};
     };
 

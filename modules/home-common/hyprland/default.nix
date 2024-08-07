@@ -1,14 +1,20 @@
 {pkgs, ...}: {
   imports = [
     ./rofi.nix
+    ./startup.nix
+    ./waybar.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = with pkgs.hyprlandPlugins; [
       hyprbars
+      split-monitor-workspaces
     ];
     settings = {
       "$mod" = "SUPER";
+      exec-once = [
+        "startup"
+      ];
       bind =
         [
           "$mod, F, exec, firefox"
@@ -24,8 +30,8 @@
                 in
                   builtins.toString (x + 1 - (c * 10));
               in [
-                "$mod, ${ws}, workspace, ${toString (x + 1)}"
-                "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+                "$mod, ${ws}, split-workspace, ${toString (x + 1)}"
+                "$mod SHIFT, ${ws}, split-movetoworkspace, ${toString (x + 1)}"
               ]
             )
             10)
