@@ -2,6 +2,7 @@
   imports = [
     ./rofi.nix
     ./waybar.nix
+    ./startup.nix
   ];
   home.packages = [pkgs.grimblast];
   wayland.windowManager.hyprland = {
@@ -17,6 +18,7 @@
       exec-once = [
         "waybar"
         "pasystray"
+        "startup"
       ];
       bind =
         [
