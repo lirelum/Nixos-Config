@@ -4,6 +4,6 @@
     ./overlays
     ./systems
     ./nixos-common
-    ./home-common
+    ./home
   ];
 }
