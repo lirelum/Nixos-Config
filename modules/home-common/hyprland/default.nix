@@ -3,6 +3,7 @@
     ./rofi.nix
     ./waybar.nix
   ];
+  home.packages = [pkgs.grimblast];
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = with pkgs.hyprlandPlugins; [
@@ -19,6 +20,7 @@
       ];
       bind =
         [
+          ", Print, exec, grimblast copy area"
           "$mod, F, exec, firefox"
           "$mod, M, exit"
           "$mod, T, exec, alacritty"
