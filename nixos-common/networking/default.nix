@@ -35,6 +35,5 @@ in {
     };
     programs.ssh.startAgent = false;
     environment.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
-
   };
 }
