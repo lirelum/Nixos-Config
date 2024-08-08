@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    neofetch
     zip
     unzip
     xz
@@ -21,7 +20,6 @@
     discord
     zotero
     libreoffice
-    gnome.file-roller
     evince
     calibre
     thunderbird
