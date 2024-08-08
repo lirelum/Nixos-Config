@@ -34,9 +34,7 @@ in {
       openFirewall = true;
     };
     programs.ssh.startAgent = false;
-    environment.shellInit = ''
-      export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
-    '';
+
     services.expressvpn.enable = true;
   };
 }
