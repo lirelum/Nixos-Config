@@ -6,7 +6,7 @@ in {
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} --time --remember-session --sessions ${hyprland-session}";
+        command = "${tuigreet} -g 'Welcome to NixOS!' --asterisks --time --remember --remember-session --sessions ${hyprland-session}";
         user = "greeter";
       };
     };
