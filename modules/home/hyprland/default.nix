@@ -3,6 +3,8 @@
     ./rofi.nix
     ./waybar.nix
     ./startup.nix
+    ./hypridle.nix
+    ./hyprlock.nix
   ];
   home.packages = [pkgs.grimblast];
   wayland.windowManager.hyprland = {
