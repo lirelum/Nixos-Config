@@ -120,11 +120,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1723084313,
-        "narHash": "sha256-EA9gTflYnBk6wi4vaAuFK8AmLhGz7rhY466ZPhB+WZk=",
+        "lastModified": 1723137927,
+        "narHash": "sha256-gWA63ztQYWgEXsZ3MLFo163XYRcwz9F7iX4LqAXTODA=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "ac92ea7075207e6320a49f8883b32c57f4b65934",
+        "rev": "cfe20b3753c2433b568e9c238f21e108ddfeb083",
         "type": "github"
       },
       "original": {
@@ -621,11 +621,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1722975770,
-        "narHash": "sha256-RCeRWB5htrHCXJyE43+qzuWcwSpBVkD/9iyhKuM4QT8=",
+        "lastModified": 1723151480,
+        "narHash": "sha256-eKG1ZIcwxFTWqM8+VQD7V/aAFwbuQMf0WYlcWvORKD8=",
         "owner": "lirelum",
         "repo": "nixvim-config",
-        "rev": "b4835fbe70bb4fd710335511d6063d7965f688ec",
+        "rev": "06b85326918695543808ef8f224b290bd4fc4dc8",
         "type": "github"
       },
       "original": {
