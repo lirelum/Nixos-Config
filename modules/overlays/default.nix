@@ -42,8 +42,7 @@
     additions = final: prev: rec {
       local = self.packages.${final.system};
       nvim = inputs.nixvim-config.packages.${final.system}.default;
-      hyprland' = inputs.hyprland.packages.${final.system};
-      hyprland = hyprland'.hyprland;
+      hyprland = inputs.hyprland.packages.${final.system}.hyprland;
       hyprlandPlugins =
         prev.hyprlandPlugins
         // inputs.split-monitor-workspaces.packages.${final.system}
