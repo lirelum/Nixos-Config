@@ -5,6 +5,7 @@
     ./startup.nix
     ./hypridle.nix
     ./hyprlock.nix
+    ./hyprpaper.nix
   ];
   home.packages = [pkgs.grimblast];
   wayland.windowManager.hyprland = {
@@ -18,10 +19,10 @@
         gaps_out = 10;
       };
       exec-once = [
+        "startup"
         "waybar"
         "pasystray"
-        "startup"
-        "hyprpaper"
+        "${pkgs.hyprpaper}/bin/hyprpaper"
       ];
       bind =
         [
