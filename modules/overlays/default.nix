@@ -21,25 +21,25 @@
       ];
       config.allowUnfree = true;
     };
-    _module.args.lib = lib.extend (
+    _module.args.lib = inputs.nixpkgs.lib.extend (
       final: prev: {
-        local = let
-          lib = final;
-          getPaths = file: root:
-            builtins.filter builtins.pathExists (
-              map (dir: root + "/${dir}/${file}") (
-                lib.attrNames (lib.filterAttrs (name: type: type == "directory") (builtins.readDir root))
-              )
-            );
-        in {
-          inherit getPaths;
-          getModules = builtins.concatMap (getPaths "default.nix");
-        };
-      }
+          local = let
+            lib = final;
+            getPaths = file: root:
+              builtins.filter builtins.pathExists (
+                map (dir: root + "/${dir}/${file}") (
+                  lib.attrNames (lib.filterAttrs (name: type: type == "directory") (builtins.readDir root))
+                )
+              );
+          in {
+            inherit getPaths;
+            getModules = builtins.concatMap (getPaths "default.nix");
+          };
+        }
     );
   };
   flake.overlays = {
-    additions = final: prev: rec {
+    additions = final: prev: {
       local = self.packages.${final.system};
       nvim = inputs.nixvim-config.packages.${final.system}.default;
       hyprland = inputs.hyprland.packages.${final.system}.hyprland;
