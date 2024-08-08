@@ -21,6 +21,7 @@
         "waybar"
         "pasystray"
         "startup"
+        "hyprpaper"
       ];
       bind =
         [
