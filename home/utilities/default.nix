@@ -24,5 +24,8 @@
     calibre
     thunderbird
     nvim
+    haskell-language-server
+    ghc
+    cabal-install
   ];
 }

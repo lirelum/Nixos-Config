@@ -621,11 +621,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1723152760,
-        "narHash": "sha256-tec3a8Io615cjlHgXyTq+zH5ODdEJ5Hq5w39w2Kfj8I=",
+        "lastModified": 1723155869,
+        "narHash": "sha256-wR1ox5VwNiw4NBfLyJuLlGcVMOqnPKlcnyiG5AaJ5Ss=",
         "owner": "lirelum",
         "repo": "nixvim-config",
-        "rev": "3c3f5f054bf6ac37e63eb4005517d5ec0a469d28",
+        "rev": "27e473a592646acdca97d9f0f10408116224d551",
         "type": "github"
       },
       "original": {
