@@ -35,6 +35,7 @@
           "$mod, J, movefocus, u"
           "$mod, K, movefocus, d"
           "$mod, L, movefocus, r"
+          "$mod, P, exec, ${pkgs.hyprlock}/bin/hyprlock"
         ]
         ++ (
           builtins.concatLists (builtins.genList (
